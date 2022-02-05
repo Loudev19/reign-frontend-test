@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --big-light-text: #3b3b3b;
+    --normal-light-text: #6b6b6b;
+    --small-light-text: #767676;
+    --accent: #1890ff;
+    --primary-bg-light: #fff;
+    --secondary-bg-light: #606060;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 44px 150px;
+}
