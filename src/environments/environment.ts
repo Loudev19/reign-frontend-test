@@ -3,8 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  url: "https://hn.algolia.com/api/v1/"
 };
+
+//search_by_date?query=angular&page=0
 
 /*
  * For easier debugging in development mode, you can import the following file
