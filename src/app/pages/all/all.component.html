@@ -1,0 +1,11 @@
+<div *ngIf="data$ | async as data">
+    <div *ngFor="let item of data">
+        <app-card 
+            [title]="item.story_title" 
+            [created_at]="item.created_at" 
+            [author]="item.author" 
+            [url]="item.story_url" 
+            [is_favorite]="item.is_favorite">
+        </app-card>
+    </div>
+</div>
