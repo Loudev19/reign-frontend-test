@@ -2,8 +2,8 @@
     <a [href]="value.story_url" target=”_blank”>
         <div class="info">
             <div class="creation-info">
-                <div><img src="assets/img/iconmonstr-time-2.svg" class="icon-time"></div>
-                <div class="created_at">{{ value.created_at | formatTime }} hours by {{ value.author }}</div>
+                <img src="assets/img/iconmonstr-time-2.svg" class="icon-time">
+                {{ value.created_at | formatTime }} hours by {{ value.author }}
             </div>
             <p class="title"> {{ value.story_title }} </p>
         </div>
