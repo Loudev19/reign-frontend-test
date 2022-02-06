@@ -1,0 +1,27 @@
+.pagination {
+    margin: 10% 25%;
+    display: inline-block;
+}
+  
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    background-color: #fff;
+    margin: 0 8px;
+    font-size: 14px;
+}
+  
+.pagination a.active {
+    background-color: var(--accent);
+    color: white;
+    border: 1px solid var(--accent);
+}
+  
+.pagination a:hover:not(.active) {
+    opacity: 0.4;
+}
