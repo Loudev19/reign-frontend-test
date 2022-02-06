@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from './components/card/card.component';
 import { FormatTimePipe } from './pipes/format-time.pipe';
 import { HeaderComponent } from './components/header/header.component';
+import { SelectComponent } from './components/select/select.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
     CardComponent,
     FormatTimePipe,
-    HeaderComponent
+    HeaderComponent,
+    SelectComponent,
+    PaginationComponent
   ],
   imports: [
     CommonModule
@@ -16,7 +20,8 @@ import { HeaderComponent } from './components/header/header.component';
   exports: [
     CardComponent,
     HeaderComponent,
-    FormatTimePipe
+    FormatTimePipe,
+    PaginationComponent
   ]
 })
 export class SharedModule { }
