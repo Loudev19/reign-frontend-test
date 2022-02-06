@@ -25,3 +25,9 @@
 .pagination a:hover:not(.active) {
     opacity: 0.4;
 }
+
+.disable {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.2;
+}

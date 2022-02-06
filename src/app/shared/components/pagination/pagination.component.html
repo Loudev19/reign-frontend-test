@@ -1,8 +1,8 @@
 <div class="pagination">
-    <a href="#">&lt;</a>
+    <a (click)="onChangePage(page-1)" [class]="page<=0 ? 'disable' : ''">&lt;</a>
     <a (click)="onChangePage(i-1)" 
         *ngFor="let i of [1,2,3,4,5,6]" 
         [class]="i-1 === page ? 'active' : ''"> 
         {{ i }} </a>
-    <a href="#">&gt;</a>
+    <a (click)="onChangePage(page+1)">&gt;</a>
 </div>
