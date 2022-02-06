@@ -1,1 +1,7 @@
 <app-header [activeTab]="'favorite'"></app-header>
+
+<div class="grid">
+    <div *ngFor="let item of data" class="item">
+        <app-card [value]="item" (deleteFavorite)="updateData()"></app-card>
+    </div>
+</div>
