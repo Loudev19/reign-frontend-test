@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { LocalStorageService } from 'src/app/core/services/local-storage.service';
+import { New } from '../../interfaces/new';
 
 @Component({
   selector: 'app-card',
@@ -7,15 +9,24 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  @Input() title!: string;
-  @Input() created_at!: Date;
-  @Input() author!: string;
-  @Input() url!: string;
-  @Input() is_favorite!: boolean;
+  @Input() value!: New;
 
-  constructor() { }
+  @Output() deleteFavorite = new EventEmitter<void>();
+
+  constructor(private localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
+  }
+
+  updateFavorite(): void {
+    if (this.value.is_favorite) {
+      this.value.is_favorite = false
+      this.localStorageService.removeFavorite(this.value)
+      this.deleteFavorite.emit()
+    } else {
+      this.value.is_favorite = true
+      this.localStorageService.saveFavorite(this.value)
+    }
   }
 
 }

@@ -1,15 +1,15 @@
 <div class="card">
-    <a [href]="url" target=”_blank”>
+    <a [href]="value.story_url" target=”_blank”>
         <div class="info">
             <div class="creation-info">
                 <div><img src="assets/img/iconmonstr-time-2.svg" class="icon-time"></div>
-                <div class="created_at">{{ created_at | formatTime }} hours by {{ author }}</div>
+                <div class="created_at">{{ value.created_at | formatTime }} hours by {{ value.author }}</div>
             </div>
-            <p class="title"> {{ title }} </p>
+            <p class="title"> {{ value.story_title }} </p>
         </div>
     </a>
-    <button class="favorite" (click)="is_favorite ? is_favorite = false : is_favorite = true">
-        <div *ngIf="is_favorite; else nonFavorite">
+    <button class="favorite" (click)="updateFavorite()">
+        <div *ngIf="value.is_favorite; else nonFavorite">
             <img src="assets/img/iconmonstr-favorite-3.svg" class="icon-favorite">
         </div>
         <ng-template #nonFavorite>
