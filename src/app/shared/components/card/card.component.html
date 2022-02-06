@@ -1,25 +1,19 @@
-<!--
-    {
-      "created_at": "2022-02-02T19:19:53.000Z",
-      "author": "kelvin0",
-      "story_title": "Vice Media organised $20m Saudi government festival",
-      "story_url": "https://www.theguardian.com/media/2022/feb/01/vice-media-secretly-organised-20m-saudi-government-festival",
-    },
--->
 <div class="card">
-    <div class="info">
-        <div class="creation-info">
-            <div><img src="assets/img/iconmonstr-time-2.svg" class="icon-time"></div>
-            <div class="created_at">{{ created_at | formatTime }} hours by {{ author }}</div>
+    <a [href]="url" target=”_blank”>
+        <div class="info">
+            <div class="creation-info">
+                <div><img src="assets/img/iconmonstr-time-2.svg" class="icon-time"></div>
+                <div class="created_at">{{ created_at | formatTime }} hours by {{ author }}</div>
+            </div>
+            <p class="title"> {{ title }} </p>
         </div>
-        <p class="title"> {{ title }} </p>
-    </div>
-    <div class="favorite">
+    </a>
+    <button class="favorite" (click)="is_favorite ? is_favorite = false : is_favorite = true">
         <div *ngIf="is_favorite; else nonFavorite">
             <img src="assets/img/iconmonstr-favorite-3.svg" class="icon-favorite">
         </div>
         <ng-template #nonFavorite>
             <img src="assets/img/iconmonstr-favorite-2.svg" class="icon-favorite">
         </ng-template>
-    </div>
+    </button>
 </div>
