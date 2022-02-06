@@ -1,13 +1,16 @@
-<app-header></app-header>
+<app-header [activeTab]="'all'"></app-header>
 
-<div *ngIf="data$ | async as data">
-    <div *ngFor="let item of data">
-        <app-card 
-            [title]="item.story_title" 
-            [created_at]="item.created_at" 
-            [author]="item.author" 
-            [url]="item.story_url" 
-            [is_favorite]="item.is_favorite">
-        </app-card>
+<select class="select" (change)="updateNews($any($event.target).value, 0)">
+    <option *ngFor="let fw of frameworks" [value]="fw.name">
+      <img [src]="fw.icon">
+      {{fw.name | titlecase}}
+    </option>
+</select>
+
+<div *ngIf="data$ | async as data" class="grid">
+    <div *ngFor="let item of data" class="item">
+        <app-card [value]="item"></app-card>
     </div>
 </div>
+
+<app-pagination [page]="currentPage" (goTo)="updateNews(currentFramework, $event)"></app-pagination>

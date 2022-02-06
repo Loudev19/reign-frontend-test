@@ -1,0 +1,29 @@
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 90px;
+    row-gap: 30px;
+}
+
+.item {
+
+}
+
+.select {
+    min-width: 240px;
+    min-height: 32px;
+    padding: 5px 12px 5px 12px;
+    border: solid 1px #2e2e2e;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 63px 0px 38px 0px;
+    font-size: 14px;
+    line-height: 1.57;
+    color: #343434;
+}
+
+img.framework-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 13px;
+}
