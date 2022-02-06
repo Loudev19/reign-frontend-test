@@ -1,0 +1,6 @@
+p {
+    font-family: 'Baskervville', serif;
+    font-size: 28px;
+    color: var(--big-light-text);
+    line-height: 28px;
+}
