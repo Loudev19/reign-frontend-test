@@ -10,9 +10,6 @@ import { NewsService } from 'src/app/shared/services/news.service';
 })
 export class AllComponent implements OnInit {
 
-  date: Date = new Date('03-01-2022')
-  url: string = "https://www.theguardian.com/media/2022/feb/01/vice-media-secretly-organised-20m-saudi-government-festival"
-
   data$: Observable<New[]> = this.newsService.getPageNews()
 
   constructor(
