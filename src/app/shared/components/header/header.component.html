@@ -3,6 +3,8 @@
 </p>
 
 <nav>
-    <a [href]="'./all'">All</a>
-    <a [href]="'./favorites'">Favorites</a>
+    <ul>
+        <li><a [class]="activeTab === 'all' ? 'active' : ''" [href]="'./all'">All</a></li>
+        <li><a [class]="activeTab === 'favorite' ? 'active' : ''" [href]="'./favorites'">Favorites</a></li>
+    </ul>
 </nav>

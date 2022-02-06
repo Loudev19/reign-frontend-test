@@ -4,3 +4,36 @@ p {
     color: var(--big-light-text);
     line-height: 28px;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+ul li {
+    display: inline;
+}
+
+ul a {
+    display: inline-block;
+    color: var(--secondary-bg-light);
+    text-align: center;
+    padding: 6px 14px;
+    min-width: 98px;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid #d6d6d6;
+}
+
+li a:hover:not(.active) {
+    opacity: 0.8;
+}
+
+li a.active {
+    color: var(--accent);
+    border: solid 1px var(--accent);
+}
