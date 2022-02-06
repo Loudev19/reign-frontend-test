@@ -8,6 +8,7 @@ import { AllComponent } from './pages/all/all.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 
 import { SharedModule } from "./shared/shared.module";
+import { CoreModule } from "./core/core.module";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SharedModule } from "./shared/shared.module";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
