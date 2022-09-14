@@ -4,7 +4,7 @@
 
 <nav>
     <ul>
-        <li><a [class]="activeTab === 'all' ? 'active' : ''" [href]="'./all'">All</a></li>
-        <li><a [class]="activeTab === 'favorite' ? 'active' : ''" [href]="'./favorites'">My faves</a></li>
+        <li><a [routerLinkActive]="activeTab === 'all' ? 'active' : ''" routerLink="/all">All</a></li>
+        <li><a [routerLinkActive]="activeTab === 'favorite' ? 'active' : ''" routerLink="/favorites">My faves</a></li>
     </ul>
 </nav>

@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FormatTimePipe implements PipeTransform {
 
-  transform(value: Date): string {
-    const milliseconds = new Date().getTime() - new Date(value).getTime();
+  transform(value: Date, lastDate: Date = new Date()): string {
+    const milliseconds = lastDate.getTime() - new Date(value).getTime();
     const seconds = milliseconds / 1000;
     const minutes = seconds / 60;
     const hours = minutes / 60;

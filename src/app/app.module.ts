@@ -9,12 +9,14 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
 
 import { SharedModule } from "./shared/shared.module";
 import { CoreModule } from "./core/core.module";
+import { ProductComponent } from './pages/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

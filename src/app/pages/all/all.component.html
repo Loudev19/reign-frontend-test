@@ -7,6 +7,10 @@
     </option>
 </select>
 
+<app-select [items]="frameworks" [selected]="'angular'">
+
+</app-select>
+
 <div *ngIf="data$ | async as data" class="grid">
     <div *ngFor="let item of data" class="item">
         <app-card [value]="item"></app-card>
